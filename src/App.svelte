@@ -1,5 +1,6 @@
 <script>
-  let showContent = false;
+  let showContent = true;
+  let names = ["Hakim", "Ashik", "Lamat"];
   let name = "Hakim";
   let heading = "<h2>Test Heading.</h2>";
   let disabled = true;
@@ -25,6 +26,10 @@
     <p class:promoted>Promoted</p>
     {@html heading}
     <button {disabled}>Click</button>
+    <!-- {:else if condition} -->
+    {#each names as name, index}
+      <p>{index + 1}.{name}</p>
+    {/each}
   {:else}
     <p>Main content is hidden.</p>
   {/if}
