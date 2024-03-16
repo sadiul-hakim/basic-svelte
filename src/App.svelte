@@ -16,6 +16,7 @@
     Hakim, A Java Spring Boot Developer, is learning Svelte for the UI of his
     backend program.
   </p>
+  <p class:underline={isUnderline}>Underline</p>
   {@html heading}
   <button {disabled}>Click</button>
 </main>
