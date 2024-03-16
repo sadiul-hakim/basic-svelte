@@ -1,7 +1,7 @@
 <script>
   import Form from "./Form.svelte";
 
-  let showContent = true;
+  let showContent = false;
   let names = ["Hakim", "Ashik", "Lamat"];
   let name = "Hakim";
   let heading = "<h2>Test Heading.</h2>";
@@ -13,12 +13,9 @@
   let count = 0;
 
   function toggle(e) {
-    console.table(e);
-
     showContent = !showContent;
   }
   function handleClick(event, num) {
-    console.log(event);
     count += num;
   }
 </script>
@@ -48,10 +45,8 @@
       <p>{index + 1}.{name}</p>
     {/each}
   {:else}
-    <p>Main content is hidden.</p>
+    <Form />
   {/if}
-
-  <Form />
 </main>
 
 <style>
