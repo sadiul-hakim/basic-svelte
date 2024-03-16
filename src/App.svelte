@@ -27,7 +27,7 @@
     {@html heading}
     <button {disabled}>Click</button>
     <!-- {:else if condition} -->
-    {#each names as name, index}
+    {#each names as name, index (index)}
       <p>{index + 1}.{name}</p>
     {/each}
   {:else}
