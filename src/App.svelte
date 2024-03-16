@@ -1,4 +1,6 @@
 <script>
+  import Form from "./Form.svelte";
+
   let showContent = true;
   let names = ["Hakim", "Ashik", "Lamat"];
   let name = "Hakim";
@@ -48,6 +50,8 @@
   {:else}
     <p>Main content is hidden.</p>
   {/if}
+
+  <Form />
 </main>
 
 <style>
