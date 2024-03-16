@@ -8,8 +8,16 @@
   let isUnderline = true;
   let promoted = true;
 
-  function toggle() {
+  let count = 0;
+
+  function toggle(e) {
+    console.table(e);
+
     showContent = !showContent;
+  }
+  function handleClick(event, num) {
+    console.log(event);
+    count += num;
   }
 </script>
 
@@ -18,6 +26,9 @@
   <button id="showButton" on:click={toggle}>show</button>
 
   {#if showContent}
+    <button on:click={(event) => handleClick(event, 2)}>Add</button>
+    <p>{count}</p>
+
     <p class={underline}>
       Hakim, A Java Spring Boot Developer, is learning Svelte for the UI of his
       backend program.
