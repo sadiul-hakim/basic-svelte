@@ -7,11 +7,15 @@
   let underline = "underline";
   let isUnderline = true;
   let promoted = true;
+
+  function toggle() {
+    showContent = !showContent;
+  }
 </script>
 
 <main>
   <h1>Hello {name}!</h1>
-  <button id="showButton">show</button>
+  <button id="showButton" on:click={toggle}>show</button>
 
   {#if showContent}
     <p class={underline}>
