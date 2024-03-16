@@ -1,7 +1,8 @@
 <script>
+  let showContent = false;
   let name = "Hakim";
   let heading = "<h2>Test Heading.</h2>";
-  let disabled = false;
+  let disabled = true;
   let underline = "underline";
   let isUnderline = true;
   let promoted = true;
@@ -9,18 +10,24 @@
 
 <main>
   <h1>Hello {name}!</h1>
-  <p class={underline}>
-    Hakim, A Java Spring Boot Developer, is learning Svelte for the UI of his
-    backend program.
-  </p>
-  <p class={isUnderline ? "underline" : ""}>
-    Hakim, A Java Spring Boot Developer, is learning Svelte for the UI of his
-    backend program.
-  </p>
-  <p class:underline={isUnderline}>Underline</p>
-  <p class:promoted>Promoted</p>
-  {@html heading}
-  <button {disabled}>Click</button>
+  <button id="showButton">show</button>
+
+  {#if showContent}
+    <p class={underline}>
+      Hakim, A Java Spring Boot Developer, is learning Svelte for the UI of his
+      backend program.
+    </p>
+    <p class={isUnderline ? "underline" : ""}>
+      Hakim, A Java Spring Boot Developer, is learning Svelte for the UI of his
+      backend program.
+    </p>
+    <p class:underline={isUnderline}>Underline</p>
+    <p class:promoted>Promoted</p>
+    {@html heading}
+    <button {disabled}>Click</button>
+  {:else}
+    <p>Main content is hidden.</p>
+  {/if}
 </main>
 
 <style>
