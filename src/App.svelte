@@ -4,6 +4,7 @@
   let disabled = false;
   let underline = "underline";
   let isUnderline = true;
+  let promoted = true;
 </script>
 
 <main>
@@ -17,11 +18,15 @@
     backend program.
   </p>
   <p class:underline={isUnderline}>Underline</p>
+  <p class:promoted>Promoted</p>
   {@html heading}
   <button {disabled}>Click</button>
 </main>
 
 <style>
+  .promoted {
+    font-style: italic;
+  }
   .underline {
     text-decoration: underline;
   }
