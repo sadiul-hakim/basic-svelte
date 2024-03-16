@@ -2,11 +2,17 @@
   let name = "Hakim";
   let heading = "<h2>Test Heading.</h2>";
   let disabled = false;
+  let underline = "underline";
+  let isUnderline = true;
 </script>
 
 <main>
   <h1>Hello {name}!</h1>
-  <p>
+  <p class={underline}>
+    Hakim, A Java Spring Boot Developer, is learning Svelte for the UI of his
+    backend program.
+  </p>
+  <p class={isUnderline ? "underline" : ""}>
     Hakim, A Java Spring Boot Developer, is learning Svelte for the UI of his
     backend program.
   </p>
@@ -15,6 +21,9 @@
 </main>
 
 <style>
+  .underline {
+    text-decoration: underline;
+  }
   main {
     text-align: center;
     padding: 1em;
