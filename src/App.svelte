@@ -1,6 +1,7 @@
 <script>
   let name = "Hakim";
   let heading = "<h2>Test Heading.</h2>";
+  let disabled = false;
 </script>
 
 <main>
@@ -10,6 +11,7 @@
     backend program.
   </p>
   {@html heading}
+  <button {disabled}>Click</button>
 </main>
 
 <style>
